@@ -1,7 +1,9 @@
-chrome.browserAction.onClicked.addListener(() => {
-  chrome.tabs.create({ url: chrome.runtime.getURL('dist/home.html') });
+chrome.action.onClicked.addListener(() => {
+  chrome.tabs.create({
+      url: chrome.runtime.getURL('dist/home.html'),
+      active: true 
+  });
 });
-
 //One of the more important things in the manifest file is the distinction between 
 // browser action and page action. Typically, when creating an extension you 
 // will want to use Browser action as I have in the third hash. The only 

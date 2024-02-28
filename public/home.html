@@ -8,18 +8,31 @@
     <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
-  <h1>Plutonication</h1>
-  <div id="qr-code"></div>
-  <div id="additional-links">
-    <h2>Enlaces Adicionales</h2>
-    <a href="https://github.com/plutonication"><img src="github-icon.png" alt="Github"></a>
-    <a href="https://t.me/plutonication"><img src="telegram-icon.png" alt="Telegram"></a>
-    <a href="https://plutonication.com/help"><img src="help-icon.png" alt="Help"></a>
-</div>
-<div id="supported-wallets">
-    <h2>Supported Wallets:</h2>
-    <a href="https://wallet1.com"><img src="wallet1-icon.png" alt="Wallet 1"></a>
-    <a href="https://wallet2.com"><img src="wallet2-icon.png" alt="Wallet 2"></a>
-</div>
+  <nav class="navbar">
+    <div class="navbar-left">
+        <a href="https://plutonication.com/help"><img src="images/appicon.png" alt="Help" width="40" height="40"></a>
+      </div>
+      <div class="navbar-right">
+        <a href="https://plutonication.com/help"><img src="images/question.svg" alt="Help" width="30" height="40"></a>
+        <span class="link-text">Help</span>
+    </div>
+  </nav>
+  <div class="container">
+      <h1>Plutonication</h1>
+      <div id="content">
+          <div id="qr-code">
+          </div>
+          <div id="wallets" >
+              <h2>Supported Wallets:</h2>
+              <a href="www.wallet1.com" id="wallet1"><img src="images/wallet1-icon.svg" alt="Github" width="20" height="20"></a>
+              <a href="www.wallet2.com" id="wallet2"><img src="images/wallet2-icon.png" alt="Github" width="20" height="20"></a>
+          </div>
+      </div>
+      <div id="additional-links" class="links">
+          <a href="https://github.com/plutonication"><img src="images/github-icon.webp" alt="Github" width="20" height="20"></a>
+          <a href="https://t.me/plutonication"><img src="images/telegram-icon.webp" alt="Telegram" width="30" height="30"></a>
+          <!-- <a href="https://plutonication.com/help"><img src="help-icon.png" alt="Help" width="30" height="30"></a> -->
+      </div>
+  </div>
 </body>
 </html>

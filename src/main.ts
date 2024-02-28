@@ -1,6 +1,9 @@
 import QRCode from 'qrcode';
 
-document.addEventListener('DOMContentLoaded', generateQRCode);
+document.addEventListener('DOMContentLoaded', () => {
+    generateQRCode();
+    setupWalletLinks();
+});
 
 async function generateQRCode() {
     const inputText = 'just testing!'; 
@@ -20,3 +23,30 @@ async function generateQRCode() {
     }
 }
 
+function setupWalletLinks() {
+    const walletLinks = document.querySelectorAll('#wallets a');
+
+    walletLinks.forEach(walletLink => {
+        walletLink.addEventListener('click', event => {
+            event.preventDefault();
+
+            const walletUrl = walletLink.getAttribute('href');
+            showWalletUrl(walletUrl as string);
+            hideQRCode();
+        });
+    });
+}
+
+function showWalletUrl(url: string) {
+    const walletsContainer = document.getElementById('wallets');
+    if (walletsContainer) {
+        walletsContainer.innerHTML = `<p>Wallet URL: ${url}</p>`;
+    }
+}
+
+function hideQRCode() {
+    const qrCodeContainer = document.getElementById('qr-code');
+    if (qrCodeContainer) {
+        qrCodeContainer.style.display = 'none';
+    }
+}
