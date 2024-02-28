@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "ES6",
+    "target": "es2017",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "strict": true
+  },
+  "include": [
+    "src/**/*.tsx",
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist"
+  ]
+}

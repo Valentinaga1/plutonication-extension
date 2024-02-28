@@ -1,0 +1,36 @@
+{
+  "name": "Typescript Chrome Extension",
+  "description": "Detect the emails on a website",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "icons": {
+      "16": "public/images/appicon.png",
+      "48": "public/images/appicon.png",
+      "128": "public/images/appicon.png"
+  },
+  "permissions": [
+      "activeTab",
+      "scripting",
+      "storage",
+      "tabs"
+  ],
+  "content_scripts": [
+      {
+          "matches": [
+              "*://*/*"
+          ],
+          "js": [
+              "dist/main.js"
+          ]
+      }
+  ],
+  "action": {
+      "default_popup": "dist/home.html"
+  },
+  "background": {
+      "service_worker": "dist/background.js"
+  },
+  "chrome_url_overrides" : {
+    "newtab": "dist/home.html"
+  }
+}
