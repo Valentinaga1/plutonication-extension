@@ -9,8 +9,9 @@
       "128": "public/images/appicon.png"
   },
   "permissions": [
-      "activeTab",
-      "tabs"
+    "activeTab",
+    "scripting",
+    "storage"
   ],
   "content_scripts": [
       {

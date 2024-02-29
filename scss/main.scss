@@ -1,98 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Anta&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lexend:wght@500&family=Libre+Franklin:wght@100&family=Open+Sans&family=Roboto&display=swap');
+
 body {
   margin: 0;
   padding: 0;
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  // background-color: #fcfcfc;
-  background-color: #020a38;
-  color: #fcfcfc;
+  /* font-family: 'Inter', sans-serif; */
+  /* font-weight: 500; */
+  /* font-style: normal; */
+  /* background-color: #020a38; */
+}
+
+.plutonication-container {
+  height: calc(-2px + 100vh);
+  width: 400px;
+  background: rgb(250, 250, 250);
+  color: rgb(36, 37, 41);
+  font-size: 16px;
+  line-height: 26px;
+  border: 1px solid rgb(221, 225, 235);
+}
+
+.scan-qr-title,
+.scan-qr-text,
+.supported-wallet-text {
+  font-size: 1rem;
+  font-weight: bolder;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Lexend', sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+
+.supported-wallet-text{
+  color: black;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 500px;
-  width: 500px; 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 2px solid #d6d9dc;;
-  border-radius: 10px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* height: 420px; */
+  /* width: 400px; */
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  /* border: 2px solid #d6d9dc; */
+  /* border-radius: 1rem; */
   text-align: center;
-
+  background-color: #0e1110;
+  /* color: #fcfcfc; */
+  padding: 20px 0px;
+  margin: 0 50px;
+  border-radius: 1rem;
 }
 
 h1 {
   text-align: center;
+  font-family: 'Lexend', sans-serif;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #qr-code {
-  border-radius: 10px; 
-  border: 2px solid black; 
-  background-color: lightgray; 
-  margin: 20px; 
-  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #020727;
+  background-color: #0e1110;
+  /* margin: 20px; */
+  /* padding: 30px; */
+  /* height: 200px; */
+  /* width: 200px; */
+  border-radius: 1rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.logo {
-  position: absolute; 
-  top: 10px; 
-  left: 10px;
-}
-
-.question-mark {
-  position: absolute;
-  top: 10px; 
-  right: 10px;
+#qr-code img {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  display: block;
+  margin: auto;
+  background-color: white;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // background-color: #333;
   padding: 10px;
-  color: white;
-  padding: 50px 100px 0 100px;
+  /* color: #fcfcfc; */
 }
 
-.navbar-left, .navbar-right {
+.navbar-left,
+.navbar-right {
   display: flex;
   align-items: center;
 }
 
-#qr-code {
-  border-radius: 10px; 
-  border: 2px solid #020727; 
-  background-color: #020727; 
-  margin: 20px; 
-  padding: 30px;
-  height: 200px;
-  width: 200px;
-}
-
-#qr-code img {
-  height: 200px;
-  width: 200px;
-  border-radius: 10px; 
-  display: block; 
-  margin: auto; 
-  background-color: white; 
-}
-
-.links {
+.links, .information {
   margin-top: 10px;
-  display: flex; 
+  display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.wallets-links {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .link-text {
   margin-left: 5px;
   font-size: 14px;
+  /* font-family: 'Roboto', sans-serif; */
+}
+
+#additional-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; 
+  margin-top: 10px;
+}
+
+#additional-links a {
+  margin: 5px;
 }

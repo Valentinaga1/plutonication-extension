@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 async function generateQRCode() {
-    const inputText = 'just testing!'; 
+    const inputText = 'just testing the qr code for plutonication extension ust testing the qr code for plutonication extensionust testing the qr code for plutonication extension'; 
 
     const qrCodeContainer = document.getElementById('qr-code');
 
