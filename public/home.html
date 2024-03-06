@@ -8,38 +8,53 @@
     <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
-  <main class="plutonication-container">
-    <nav class="navbar">
-      <div class="navbar-left">
-          <a href="https://plutonication.com/help"><img src="images/appicon.png" alt="Help" width="40" height="40"></a>
-          <span class="link-text scan-qr-title">Plutonication</span>
-        </div>
-        <div class="navbar-right">
-          <a href="https://plutonication.com/help"><img src="images/help-icon.jpeg" alt="Help" width="20" height="20"></a>
-          <span class="link-text">Help</span> 
+  <main class="plutonication__component">
+    <div class="plutonication__qr-container">
+      <p class="plutonication__qr-title">Plutonication</p>
+      <div id="content" class="plutonication__qr-content">
+        <div id="qr-code" class="plutonication__qr-code"></div>
       </div>
-    </nav>
-    <div class="container">
-        <p class="scan-qr-title" id="scan-qr-title">Plutonication</p>
-        <div id="content">
-            <div id="qr-code">
-            </div>
-            
-        </div>
-        <p class="scan-qr-text" id="scan-qr-text">Scan this QR with your phone.</p>
-      </div>
-      <div id="additional-links" class="links">
-        <div id="wallets" class="wallets-links">
-            <p class="supported-wallet-text" id="scan-qr-text">Supported Wallets:</p>
-            <a href="www.wallet1.com" id="wallet1"><img src="images/wallet1-icon.svg" alt="Github" width="20" height="20"></a>
-            <a href="www.wallet2.com" id="wallet2"><img src="images/wallet2-icon.png" alt="Github" width="20" height="20"></a>
-        </div>
-        
+      <!-- <p class="scan-qr-text" id="scan-qr-text">Scan this QR with your phone.</p> -->
     </div>
-    <div id="additional-info" class="information">
-      <a href="https://github.com/plutonication"><img src="images/github-icon.webp" alt="Github" width="20" height="20"></a>
-      <a href="https://t.me/plutonication"><img src="images/telegram-icon.webp" alt="Telegram" width="30" height="30"></a>
-  </div>
+    <div id="wallets" class="plutonication__wallets-container">
+      <p>Supported Wallets:</p>
+      <div class="plutonication__wallets-content">
+        <a href="www.wallet1.com" id="wallet1" class="plutonication__wallets-item">
+          <img src="images/rainbow-wallet.png" alt="Github" width="50" height="50">
+          <span class="plutonication__wallets-item-description">Rainbow</span>
+        </a>
+        <a href="www.wallet1.com" id="wallet1" class="plutonication__wallets-item"> 
+          <img src="images/metamask-wallet.png" alt="Github" width="50" height="50">
+          <span class="plutonication__wallets-item-description">Metamask</span>
+        </a>
+        <a href="www.wallet2.com" id="wallet2" class="plutonication__wallets-item">
+          <img src="images/trust-wallet.svg" alt="Github" width="50" height="50">
+          <span class="plutonication__wallets-item-description">Trust</span>
+        </a>
+        <div href="#" id="showMoreWallets" class="plutonication__wallets-item">
+          <img src="images/plus-icon.svg" alt="Más" width="50" height="50">
+        </div>
+        <a href="www.wallet1.com" id="wallet1" class="plutonication__wallets-item"> 
+          <img src="images/metamask-wallet.png" alt="Github" width="50" height="50">
+          <span class="plutonication__wallets-item-description">Metamask</span>
+        </a>
+        <a href="www.wallet1.com" id="wallet1" class="plutonication__wallets-item">
+          <img src="images/rainbow-wallet.png" alt="Github" width="50" height="50">
+          <span class="plutonication__wallets-item-description">Rainbow</span>
+        </a>
+        <a href="www.wallet2.com" id="wallet2" class="plutonication__wallets-item">
+          <img src="images/trust-wallet.svg" alt="Github" width="50" height="50">
+          <span class="plutonication__wallets-item-description">Trust</span>
+        </a>
+
+      </div>
+    </div>
+    <div id="additional-info" class="plutonication__social-media-container">
+        <p>Docs</p>
+        <a href="https://github.com/plutonication"><img src="images/github.svg" alt="Github" width="20" height="20"></a>
+        <a href="https://t.me/plutonication"><img src="images/telegram.svg" alt="Telegram" width="20" height="20"></a>
+        <a href="https://plutonication.com/help"><img src="images/question-mark.svg" alt="Help" width="20" height="20"></a>
+    </div>
     
   </main>
 </body>

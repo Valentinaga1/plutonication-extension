@@ -3,6 +3,7 @@ import QRCode from 'qrcode';
 document.addEventListener('DOMContentLoaded', () => {
     generateQRCode();
     setupWalletLinks();
+    setupShowMoreWallets();
 });
 
 async function generateQRCode() {
@@ -36,6 +37,34 @@ function setupWalletLinks() {
         });
     });
 }
+
+
+function setupShowMoreWallets() {
+    const showMoreWalletsButton = document.getElementById('showMoreWallets');
+    const additionalWallets = document.querySelectorAll('.plutonication__wallets-content a:nth-child(n+4)');
+
+    additionalWallets.forEach(wallet => {
+        const walletElement = wallet as HTMLElement;
+        walletElement.style.display = 'none';
+    });
+
+    if (showMoreWalletsButton) {
+        showMoreWalletsButton.addEventListener('click', event => {
+            event.preventDefault();
+
+            additionalWallets.forEach(wallet => {
+                const walletElement = wallet as HTMLElement;
+                walletElement.style.display = walletElement.style.display === 'none' ? 'block' : 'none';
+            });
+
+            showMoreWalletsButton.style.display = 'none';
+        });
+    }
+}
+
+
+
+
 
 function showWalletUrl(url: string) {
     const walletsContainer = document.getElementById('wallets');
