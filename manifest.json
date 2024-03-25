@@ -1,5 +1,6 @@
 {
   "name": "Typescript Chrome Extension",
+  "short_name": "Plutonication extension (polkadot.js)",
   "description": "Detect the emails on a website",
   "version": "1.0.0",
   "manifest_version": 3,
@@ -24,12 +25,12 @@
       }
   ],
   "action": {
-      "default_popup": "dist/home.html"
+      "default_popup": "dist/main.html"
   },
   "background": {
       "service_worker": "dist/background.js"
   },
   "chrome_url_overrides" : {
-    "newtab": "dist/home.html"
+    "newtab": "dist/main.html"
   }
 }

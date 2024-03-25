@@ -1,0 +1,1 @@
+// interacción entre la extensión y el contenido de la página web. 

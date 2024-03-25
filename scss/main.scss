@@ -4,6 +4,13 @@ body {
   margin: 0;
   padding: 0;
   border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: bolder;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Lexend', sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .plutonication__component{
@@ -23,13 +30,14 @@ body {
   .plutonication__wallets-item-description {
     margin: 0;
     color: white;
-    font-size: 1rem;
-    font-weight: bolder;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Inter', sans-serif;
-    font-family: 'Lexend', sans-serif;
-    font-family: 'Libre Franklin', sans-serif;
-    font-family: 'Open Sans', sans-serif;
+    // padding-bottom: 1rem;
+    // font-size: 1rem;
+    // font-weight: bolder;
+    // font-family: 'Roboto', sans-serif;
+    // font-family: 'Inter', sans-serif;
+    // font-family: 'Lexend', sans-serif;
+    // font-family: 'Libre Franklin', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
   }
 
   .plutonication__qr-container {
@@ -37,16 +45,21 @@ body {
     background-color: #0e1110;
     border-radius: 1rem;
 
+    .plutonication__qr-title-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
     .plutonication__qr-content {
       display: flex;
       flex-direction: column;
       align-items: center;
 
       .plutonication__qr-code {
-        border-radius: 10px;
         border: 2px solid #020727;
         background-color: #0e1110;
         border-radius: 1rem;
+        margin: 1rem;
 
         img {
           height: 200px;
@@ -58,11 +71,58 @@ body {
         }
       }
     }
+
+    .back-button-img {
+      margin-right: 1rem;
+    }
   }
 
   .plutonication__wallets-container {
     border-top: none;
     padding: 1rem 0;
+
+    // .plutonication__wallets-btn-container {
+    //   display: flex;
+    //   flex-direction: row;
+    //   justify-content: space-between;
+    //   align-items: center;
+    //   // margin: 0 0.7rem;
+    //   height: 200px;
+
+    //   .plutonication__wallets-btn-download {
+    //     border-radius: 0.5rem;
+    //     background: #393939;
+    //     color: white;
+    //     padding: 0.4rem;
+
+    //     &:hover {
+    //       cursor: pointer;
+    //     }
+        
+    //     .plutonication__wallets-btn-content {
+    //       display: flex;
+    //       justify-content: center;
+    //       align-items: center;
+    //       width: 140px;
+
+    //       img {
+    //         margin-right: 0.3rem;
+    //       }
+
+    //       .plutonication__wallets-btn-p1 {
+    //         font-size: 0.7rem;
+    //         text-align: justify;
+    //       }
+
+    //       .plutonication__wallets-btn-p2 {
+    //         font-size: 0.9rem;
+    //         text-align: justify;
+
+    //       }
+    //     }
+    //   }
+
+    // }
   
     .plutonication__wallets-content {
       display: grid;
@@ -109,6 +169,49 @@ body {
       }
     }
   }
+
+    .plutonication__wallets-btn-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      // margin: 0 0.7rem;
+      height: 200px;
+
+      .plutonication__wallets-btn-download {
+        border-radius: 0.5rem;
+        background: #393939;
+        color: white;
+        padding: 0.4rem;
+
+        &:hover {
+          cursor: pointer;
+        }
+        
+        .plutonication__wallets-btn-content {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 140px;
+
+          img {
+            margin-right: 0.3rem;
+          }
+
+          .plutonication__wallets-btn-p1 {
+            font-size: 0.7rem;
+            text-align: justify;
+          }
+
+          .plutonication__wallets-btn-p2 {
+            font-size: 0.9rem;
+            text-align: justify;
+
+          }
+        }
+      }
+
+    }
 
   .plutonication__social-media-container{
     display: flex;
