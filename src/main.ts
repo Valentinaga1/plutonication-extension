@@ -83,6 +83,7 @@ function setupShowMoreWallets() {
     const showMoreWalletsButton = document.getElementById('showMoreWallets');
     const additionalWallets = document.querySelectorAll('.plutonication__wallets-content div:nth-child(n+5)');
     console.log("additionalWallets", additionalWallets);
+    console.log("showMoreWalletsButton", showMoreWalletsButton);
     additionalWallets.forEach(wallet => {
         const walletElement = wallet as HTMLElement;
         walletElement.style.display = 'none';
@@ -118,15 +119,18 @@ function showWalletUrl(url: string, walletNameElement: string, downloadLinks: { 
         originalWalletsContent = walletContainer.innerHTML;
     }
 
-    const backButtonImg = document.createElement('img');
-    backButtonImg.classList.add('back-button-img');
-    backButtonImg.src = 'images/arrow-back.svg';
-    backButtonImg.alt = 'back';
-    backButtonImg.width = 15;
-    backButtonImg.height = 15;
-    walletTitle?.insertBefore(backButtonImg, walletTitle?.firstChild);
 
-    backButtonImg.addEventListener('click', () => {
+    const closeButtonSpan = document.createElement('span');
+    closeButtonSpan.classList.add('back-button-img');
+    closeButtonSpan.innerHTML = '&times;';
+    
+    const closeButtonContainer = document.createElement('div');
+    walletTitle?.parentNode?.insertBefore(closeButtonContainer, walletTitle?.nextSibling); 
+    closeButtonContainer.appendChild(walletTitle);
+    closeButtonContainer.appendChild(closeButtonSpan); 
+
+
+    closeButtonSpan.addEventListener('click', () => {
         if (qrContainer) qrContainer.style.display = 'block';
         if (walletTitle) walletTitle.textContent = 'Plutonication';
         if (walletContainer) {
@@ -135,7 +139,7 @@ function showWalletUrl(url: string, walletNameElement: string, downloadLinks: { 
             setupWalletLinks();
             setupShowMoreWallets();
         }
-        backButtonImg.remove();
+        closeButtonSpan.remove();
         generateQRCode('plutonication:?url=wss%3A%2F%2Fplutonication-acnha.ondigitalocean.app%2F&key=1710194226878&name=Plutonication%20test&icon=https%3A%2F%2Frostislavlitovkin.pythonanywhere.com%2Fplutowalleticonwhite');
     });
 
@@ -143,7 +147,7 @@ function showWalletUrl(url: string, walletNameElement: string, downloadLinks: { 
         <div class="plutonication__wallets-btn-container">
             <button data-platform="android" class="plutonication__wallets-btn-download">
                 <div class="plutonication__wallets-btn-content">
-                    <img src="images/google-icon.svg" alt="google" width="30" height="30"/>
+                    <img src="images/google-play.svg" alt="google" width="30" height="30"/>
                     <div>
                         <p class="plutonication__wallets-btn-p1">Get in on</p>
                         <p class="plutonication__wallets-btn-p2">Google Play</p>

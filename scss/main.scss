@@ -45,6 +45,27 @@ body {
     background-color: #0e1110;
     border-radius: 1rem;
 
+    div:first-child {
+      display: flex;
+      justify-content: center;
+
+      p {
+        width: 280px;
+        margin-left: 1.3rem;
+      }
+
+      span {
+        color: #aaa;
+        font-size: 28px;
+        font-weight: bold;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+    }
+
     .plutonication__qr-title-container {
       display: flex;
       justify-content: space-between;
@@ -70,10 +91,6 @@ body {
           background-color: white;
         }
       }
-    }
-
-    .back-button-img {
-      margin-right: 1rem;
     }
   }
 
@@ -134,27 +151,36 @@ body {
       column-gap: 0.5rem;
       row-gap: 0.5rem;
 
-      .plutonication__wallets-item {
+      .plutonication__wallets-item,
+      .plutonication__wallets-item-plus {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
         text-decoration: none;
-        padding: 0.5rem 0.5rem;
+        padding-top: 0.4rem;
+        // padding: 0.5rem 0.5rem;
+        
         background-color: #393939;
         border-radius: 10px;
 
-        img {
-          width: 50px; 
-          height: 50px;
+        .plutonication__wallets-item img {
+          // width: 50px; 
+          // height: 50px;
           border-radius: 1rem;
+        }
+
+        #showMoreWallets img {
+          // width: 30px; 
+          // height: 30px;
+
         }
 
         .plutonication__wallets-item-description {
           display: block;
           text-align: center;
-          font-size: 0.6rem;
+          font-size: 0.65rem;
           color: white;
           overflow: hidden;
           text-overflow: ellipsis;
@@ -166,6 +192,10 @@ body {
           white-space: normal;
           width: auto;
         }
+      }
+
+      .plutonication__wallets-item:nth-child(4) {
+        padding-top: 0;
       }
 
       div:hover {
